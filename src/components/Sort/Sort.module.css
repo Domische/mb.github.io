@@ -1,0 +1,46 @@
+.container {
+    position: relative;
+}
+
+.sortBtn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.sort__list,
+.sort__list_active {
+    z-index: 10;
+    position: absolute;
+    width: 160px;
+    list-style: none;
+    background-color: white;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 10px;
+    right: 35px;
+    top: 37px;
+    transform: scale(0);
+    transform-origin: right top;
+    transition: transform 0.3s ease-in;
+}
+
+.sort__list_active {
+    transform: scale(1);
+    transition: transform 0.3s ease-in;
+}
+
+.sort__list_item, .sort__list_item_active {
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.sort__list_item_active {
+    color: black;
+}

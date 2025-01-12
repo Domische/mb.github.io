@@ -1,0 +1,20 @@
+{
+    "photo": [
+        {
+            "id": 1,
+            "url": "https://motor.ru/imgs/2023/12/06/10/6259462/a6355b8f30f1f4bfd192537874efb57cccf39527.jpg"
+        },
+        {
+            "id": 2,
+            "url": "https://bluesky-cogcms-prodb.cdn.imgeng.in/media/23kcymvw/mercedes-amg-gt-c192-stage-3840x3840-07-2023.jpg?width=1200&height=800&mode=crop&scale=both"
+        },
+        {
+            "id": 3,
+            "url": "https://avatars.mds.yandex.net/get-verba/997355/2a00000187e6a56fc2d2c95326c2b0135d3c/cattouchret"
+        },
+        {
+            "id": 4,
+            "url": "https://www.topgear.com/sites/default/files/cars-car/image/2024/11/1-AMG-S63-2024-review.jpg"
+        }
+    ]
+}

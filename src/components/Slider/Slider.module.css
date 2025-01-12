@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: black;
+}
+
+.leftBtn, .rightBtn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 5;
+    filter: invert(1);
+    opacity: 0.3;
+    transition: opacity 0.2s ease;
+}
+
+.leftBtn:hover {
+    opacity: 1;
+}
+
+.rightBtn:hover {
+    opacity: 1;
+}
+
+.leftBtn{
+    left: 1px;
+}
+
+.rightBtn {
+    right: 1px;
+}
+
+.slider {
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+}
+
+.slider__line {
+    display: flex;
+    list-style: none;
+}
+
+
+.slider__line_item img {
+    width: 1200px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    user-select: none;
+}

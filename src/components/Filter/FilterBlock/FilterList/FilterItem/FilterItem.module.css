@@ -1,0 +1,14 @@
+.filter__block_list_item, .filter__block_list_item_check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    user-select: none;
+    margin-bottom: 5px;
+    color: grey;
+    cursor: pointer;
+}
+
+.filter__block_list_item_check {
+    color: black;
+}

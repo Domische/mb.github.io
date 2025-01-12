@@ -1,0 +1,58 @@
+.container {
+    position: relative;
+    margin-left: 2px;
+}
+
+.filterBtn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.saveBtn, .clearBtn {
+    border: 2px solid black;
+    width: 100%;
+    border-radius: 15px;
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    color: black;
+    user-select: none;
+}
+
+.clearBtn:hover {
+    background-color: black;
+    color: white;
+}
+
+.saveBtn:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.filter, .filter_active {
+    position: absolute;
+    padding: 10px;
+    width: 200px;
+    height: auto;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    opacity:  0;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+.filter_active {
+    opacity:  1;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+}
+
+

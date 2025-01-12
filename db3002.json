@@ -1,0 +1,170 @@
+{
+    "cars": [
+        {
+            "name": "Mercedes-Benz E-Class AMG Line",
+            "imageURL": "https://mbr.ru/upload/iblock/12d/2vkbq4mdfbmou6utqru6zlta2wr42y0p.jpeg",
+            "carbody": "Седан",
+            "color": "Синий",
+            "price": 11312000,
+            "rating": 5,
+            "year": 2024,
+            "id": 101,
+            "power": 258
+        },
+        {
+            "name": "Mercedes-Benz GLC coupe Base",
+            "imageURL": "https://mbr.ru/upload/iblock/d3e/n8wg082212n75coebnndrv23sg2drhwp.jpeg",
+            "carbody": "Кроссовер",
+            "color": "Серый",
+            "price":  14000000,
+            "rating": 4,
+            "year": 2024,
+            "id": 101,
+            "power": 258
+        },
+        {
+            "name": "Mercedes-Benz E-Class Base",
+            "imageURL": "https://mbr.ru/upload/iblock/ed0/tk8optqdqwvxcfxnw2lx5q8z9o48db7i.jpeg",
+            "carbody": "Седан",
+            "color": "Белый",
+            "price": 13306291,
+            "rating": 7,
+            "year": 2023,
+            "id": 101,
+            "power": 197
+        },
+        {
+            "name": "Mercedes-Benz GLE Base",
+            "imageURL": "https://mbr.ru/upload/iblock/d12/226zc3wqwf9x1mdoxmw6kqrgxausz033.jpeg",
+            "carbody": "Кроссовер",
+            "color": "Синий",
+            "price":  15175300,
+            "rating": 5,
+            "year": 2023,
+            "id": 101,
+            "power": 269
+        },
+        {
+            "name": "Mercedes-Benz V-Class Avantgarde",
+            "imageURL": "https://mbr.ru/upload/iblock/7db/1qwvsvv57bt8v9gfwrsd41jemnv0oc4c.jpeg",
+            "carbody": "Минивен",
+            "color": "Черный",
+            "price": 16274000,
+            "rating": 9,
+            "year": 2024,
+            "id": 101,
+            "power": 163
+        },
+        {
+            "name": "Mercedes-Benz V-Class Avantgarde",
+            "imageURL": "https://mbr.ru/upload/iblock/de4/cj2m11bwu9y1eqddqr3xclufuia0w2kp.jpeg",
+            "carbody": "Минивен",
+            "color": "Черный",
+            "price":  17922000,
+            "rating": 8,
+            "year": 2024,
+            "id": 101,
+            "power": 237
+        },
+        {
+            "name": "Mercedes-Benz GLS Base",
+            "imageURL": "https://mbr.ru/upload/iblock/947/tnvhh53fkh530gfgufo4aowy4npv0kdy.jpeg",
+            "carbody": "Кроссовер",
+            "color": "Красный",
+            "price": 19623381,
+            "rating": 3,
+            "year": 2024,
+            "id": 101,
+            "power": 367
+        },
+        {
+            "name": "Mercedes-Benz EQS SUV Base",
+            "imageURL": "https://mbr.ru/upload/iblock/390/2p7vw4j28cenmtu4xshtzec1g0c00kbh.jpeg",
+            "carbody": "Кроссовер",
+            "color": "Черный",
+            "price":  23554300,
+            "rating": 2,
+            "year": 2023,
+            "id": 101,
+            "power": 544
+        },
+        {
+            "name": "Mercedes-Benz S-Class Base",
+            "imageURL": "https://mbr.ru/upload/iblock/989/w91ydfg1iybc9mlwhcr1y4seh4xpl26d.jpeg",
+            "carbody": "Седан",
+            "color": "Черный",
+            "price": 25214400,
+            "rating": 1,
+            "year": 2024,
+            "id": 101,
+            "power": 381
+        },
+        {
+            "name": "Mercedes-Benz GLS Base",
+            "imageURL": "https://mbr.ru/upload/iblock/878/x1pe207fvcg51atkt2irh9aqz8icoac0.jpeg",
+            "carbody": "Кроссовер",
+            "color": "Зеленый",
+            "price":  20188000,
+            "rating": 7,
+            "year": 2023,
+            "id": 101,
+            "power": 367
+        },
+        {
+            "name": "Mercedes-Benz G-Class AMG",
+            "imageURL": "https://mbr.ru/upload/iblock/da1/50oe5u4sti6jp3o0i1d2ge8wtko3yljc.jpeg",
+            "carbody": "Внедорожник",
+            "color": "Черный",
+            "price": 31369800,
+            "rating": 1,
+            "year": 2023,
+            "id": 101,
+            "power": 585
+        },
+        {
+            "name": "Mercedes-Benz Maybach GLS Base",
+            "imageURL": "https://mbr.ru/upload/iblock/3fb/jsfaqh16ejbs0c2w0sl2jzep3vnnhi2j.jpeg",
+            "carbody": "Кроссовер",
+            "color": "Черный",
+            "price":  35880000,
+            "rating": 1,
+            "year": 2024,
+            "id": 101,
+            "power": 557
+        },
+        {
+            "name": "Mercedes-Benz Maybach S-Class Base",
+            "imageURL": "https://mbr.ru/upload/iblock/64f/a4nlqf82lhfx6dgnz8qbc5nhyc247vgt.jpeg",
+            "carbody": "Седан",
+            "color": "Черный",
+            "price":  32812500,
+            "rating": 1,
+            "year": 2024,
+            "id": 101,
+            "power": 503
+        },
+        {
+            "name": "Mercedes-Benz GLS Luxury",
+            "imageURL": "https://mbr.ru/upload/iblock/090/ylpgy63smijtlpjgx7ilc8hpyfe56efp.jpeg",
+            "carbody": "Кроссовер",
+            "color": "Белый",
+            "price":  17611370,
+            "rating": 6,
+            "year": 2024,
+            "id": 101,
+            "power": 330
+        },
+        {
+            "name": "Mercedes-Benz G-Class Base",
+            "imageURL": "https://mbr.ru/upload/iblock/c9f/qheqnld873215vc03jhx9tf7v35e64ws.jpeg",
+            "carbody": "Внедорожник",
+            "color": "Розовый",
+            "price":  29699832,
+            "rating": 10,
+            "year": 2023,
+            "id": 101,
+            "power": 422
+        }
+        
+    ]
+}
