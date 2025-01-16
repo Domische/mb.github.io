@@ -11,7 +11,7 @@ const FilterBlock: React.FC<IFilterTypeArr> = ({title, arr, setActive, active })
                 <span>{title}</span>
                 <BsChevronDown onClick={() => setActive(!active)} className={active ? style.filter__open_active : style.filter__open} />
             </div>
-            <FilterList arr={arr}  active={active} />
+            <FilterList title={title} arr={arr} active={active} />
         </>
     )
 }

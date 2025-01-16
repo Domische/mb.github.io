@@ -1,0 +1,123 @@
+.skeleton {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    animation-name: skeleton;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes skeleton {
+    0% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -80%, rgb(201, 201, 201) -40%, rgb(221, 221, 221) 0%);
+    }
+    2.7% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -75%, rgb(201, 201, 201) -35%, rgb(221, 221, 221) 5%);
+    }
+    5.4% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -70%, rgb(201, 201, 201) -30%, rgb(221, 221, 221) 10%);
+    }
+    8.1% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -65%, rgb(201, 201, 201) -25%, rgb(221, 221, 221) 15%);
+    }
+    10.8% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -60%, rgb(201, 201, 201) -20%, rgb(221, 221, 221) 20%);
+    }
+    13.5% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -55%, rgb(201, 201, 201) -15%, rgb(221, 221, 221) 25%);
+    }
+    16.2% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -50%, rgb(201, 201, 201) -10%, rgb(221, 221, 221) 30%);
+    }
+    17.9% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -45%, rgb(201, 201, 201) -5%, rgb(221, 221, 221) 35%);
+    }
+    21.6% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -40%, rgb(201, 201, 201) 0%, rgb(221, 221, 221) 40%);
+    }
+    24.3% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -35%, rgb(201, 201, 201) 5%, rgb(221, 221, 221) 45%);
+    }
+    27% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -30%, rgb(201, 201, 201) 10%, rgb(221, 221, 221) 50%);
+    }
+    29.7% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -25%, rgb(201, 201, 201) 15%, rgb(221, 221, 221) 55%);
+    }
+    32.4% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -20%, rgb(201, 201, 201) 20%, rgb(221, 221, 221) 60%);
+    }
+    35.1% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -15%, rgb(201, 201, 201) 25%, rgb(221, 221, 221) 65%);
+    }
+    37.8% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -10%, rgb(201, 201, 201) 30%, rgb(221, 221, 221) 70%);
+    }
+    40.5% {
+        background: linear-gradient(to right,rgb(221, 221, 221) -5%, rgb(201, 201, 201) 35%, rgb(221, 221, 221) 75%);
+    }
+    43.2% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 0%, rgb(201, 201, 201) 40%, rgb(221, 221, 221) 80%);
+    }
+    45.9% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 5%, rgb(201, 201, 201) 45%, rgb(221, 221, 221) 85%);
+    }
+    48.6% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 10%, rgb(201, 201, 201) 50%, rgb(221, 221, 221) 90%);
+    }
+    51.3% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 15%, rgb(201, 201, 201) 55%, rgb(221, 221, 221) 95%);
+    }
+    54% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 20%, rgb(201, 201, 201) 60%, rgb(221, 221, 221) 100%);
+    }
+    56.7% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 25%, rgb(201, 201, 201) 65%, rgb(221, 221, 221) 105%);
+    }
+    59.4% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 30%, rgb(201, 201, 201) 70%, rgb(221, 221, 221) 110%);
+    }
+    62.1% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 35%, rgb(201, 201, 201) 75%, rgb(221, 221, 221) 115%);
+    }
+    64.8% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 40%, rgb(201, 201, 201) 80%, rgb(221, 221, 221) 120%);
+    }
+    67.5% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 45%, rgb(201, 201, 201) 85%, rgb(221, 221, 221) 125%);
+    }
+    70.2% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 50%, rgb(201, 201, 201) 90%, rgb(221, 221, 221) 130%);
+    }
+    72.9% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 55%, rgb(201, 201, 201) 95%, rgb(221, 221, 221) 135%);
+    }
+    75.6% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 60%, rgb(201, 201, 201) 100%, rgb(221, 221, 221) 140%);
+    }
+    78.3% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 65%, rgb(201, 201, 201) 105%, rgb(221, 221, 221) 145%);
+    }
+    81% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 70%, rgb(201, 201, 201) 110%, rgb(221, 221, 221) 150%);
+    }
+    83.7% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 75%, rgb(201, 201, 201) 115%, rgb(221, 221, 221) 155%);
+    }
+    86.4% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 80%, rgb(201, 201, 201) 120%, rgb(221, 221, 221) 160%);
+    }
+    89.1% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 85%, rgb(201, 201, 201) 125%, rgb(221, 221, 221) 165%);
+    }
+    91.8% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 90%, rgb(201, 201, 201) 130%, rgb(221, 221, 221) 170%);
+    }
+    94.5% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 95%, rgb(201, 201, 201) 135%, rgb(221, 221, 221) 175%);
+    }
+    100% {
+        background: linear-gradient(to right,rgb(221, 221, 221) 100%, rgb(201, 201, 201) 140%, rgb(221, 221, 221) 180%);
+    }
+}

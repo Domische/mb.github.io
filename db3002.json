@@ -2,7 +2,7 @@
     "cars": [
         {
             "name": "Mercedes-Benz E-Class AMG Line",
-            "imageURL": "https://mbr.ru/upload/iblock/12d/2vkbq4mdfbmou6utqru6zlta2wr42y0p.jpeg",
+            "imageURL": "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/pa5tm0inateux6lgon6m",
             "carbody": "Седан",
             "color": "Синий",
             "price": 11312000,
@@ -19,7 +19,7 @@
             "price":  14000000,
             "rating": 4,
             "year": 2024,
-            "id": 101,
+            "id": 102,
             "power": 258
         },
         {
@@ -30,7 +30,7 @@
             "price": 13306291,
             "rating": 7,
             "year": 2023,
-            "id": 101,
+            "id": 103,
             "power": 197
         },
         {
@@ -41,7 +41,7 @@
             "price":  15175300,
             "rating": 5,
             "year": 2023,
-            "id": 101,
+            "id": 104,
             "power": 269
         },
         {
@@ -52,7 +52,7 @@
             "price": 16274000,
             "rating": 9,
             "year": 2024,
-            "id": 101,
+            "id": 105,
             "power": 163
         },
         {
@@ -63,18 +63,18 @@
             "price":  17922000,
             "rating": 8,
             "year": 2024,
-            "id": 101,
+            "id": 106,
             "power": 237
         },
         {
             "name": "Mercedes-Benz GLS Base",
-            "imageURL": "https://mbr.ru/upload/iblock/947/tnvhh53fkh530gfgufo4aowy4npv0kdy.jpeg",
+            "imageURL": "https://avatars.mds.yandex.net/get-autoru-vos/1987671/db108eb9ddd815d440c8b16dbf1f8007/1200x900",
             "carbody": "Кроссовер",
             "color": "Красный",
             "price": 19623381,
             "rating": 3,
             "year": 2024,
-            "id": 101,
+            "id": 107,
             "power": 367
         },
         {
@@ -85,18 +85,18 @@
             "price":  23554300,
             "rating": 2,
             "year": 2023,
-            "id": 101,
+            "id": 108,
             "power": 544
         },
         {
             "name": "Mercedes-Benz S-Class Base",
-            "imageURL": "https://mbr.ru/upload/iblock/989/w91ydfg1iybc9mlwhcr1y4seh4xpl26d.jpeg",
+            "imageURL": "https://ixrental.com/wp-content/uploads/2024/09/9c4fbfb2-e80b-47d6-b8c4-2790d1fdf929.jpg",
             "carbody": "Седан",
             "color": "Черный",
             "price": 25214400,
-            "rating": 1,
+            "rating": 2,
             "year": 2024,
-            "id": 101,
+            "id": 109,
             "power": 381
         },
         {
@@ -107,7 +107,7 @@
             "price":  20188000,
             "rating": 7,
             "year": 2023,
-            "id": 101,
+            "id": 110,
             "power": 367
         },
         {
@@ -118,7 +118,7 @@
             "price": 31369800,
             "rating": 1,
             "year": 2023,
-            "id": 101,
+            "id": 111,
             "power": 585
         },
         {
@@ -129,7 +129,7 @@
             "price":  35880000,
             "rating": 1,
             "year": 2024,
-            "id": 101,
+            "id": 112,
             "power": 557
         },
         {
@@ -140,18 +140,18 @@
             "price":  32812500,
             "rating": 1,
             "year": 2024,
-            "id": 101,
+            "id": 113,
             "power": 503
         },
         {
             "name": "Mercedes-Benz GLS Luxury",
-            "imageURL": "https://mbr.ru/upload/iblock/090/ylpgy63smijtlpjgx7ilc8hpyfe56efp.jpeg",
+            "imageURL": "https://www.major-auto.ru/cars_images/1533798/2D/medium/1533798_1_7846799_15056359.JPG",
             "carbody": "Кроссовер",
             "color": "Белый",
             "price":  17611370,
             "rating": 6,
             "year": 2024,
-            "id": 101,
+            "id": 114,
             "power": 330
         },
         {
@@ -162,7 +162,7 @@
             "price":  29699832,
             "rating": 10,
             "year": 2023,
-            "id": 101,
+            "id": 115,
             "power": 422
         }
         

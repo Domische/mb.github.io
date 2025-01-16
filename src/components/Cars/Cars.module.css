@@ -1,7 +1,7 @@
 .cars__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 250px);
+    grid-template-rows: repeat(2, 250px);
     gap: 20px;
     justify-items: center;
     list-style: none;

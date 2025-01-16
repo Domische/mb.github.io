@@ -2,30 +2,34 @@ import { VscListFilter } from "react-icons/vsc";
 import style from './Sort.module.css';
 import { useEffect, useRef, useState } from "react";
 import { FiCheck } from "react-icons/fi";
+import { useAppDispatch, useAppSelector } from "../../hook";
+import { setSort } from "../../store/sortSlice";
 
 interface ISortItem {
   sortName: string;
+  sortTitle: string;
   sortProperty: string;
 }
 
 type SortArr = ISortItem[];
 
 const sortArr: SortArr = [
-  { sortName: 'Дешевле', sortProperty: 'asc' },
-  { sortName: 'Дороже', sortProperty: 'desc' },
-  { sortName: 'Cтарые', sortProperty: 'asc' },
-  { sortName: 'Новые', sortProperty: 'desc' },
-  { sortName: 'Непопулярные', sortProperty: 'asc' },
-  { sortName: 'Популярные', sortProperty: 'desc' },
+  { sortName: 'price', sortTitle: 'Дешевле', sortProperty: 'asc' },
+  { sortName: 'price', sortTitle: 'Дороже', sortProperty: 'desc' },
+  { sortName: 'year', sortTitle: 'Cтарые', sortProperty: 'asc' },
+  { sortName: 'year', sortTitle: 'Новые', sortProperty: 'desc' },
+  { sortName: 'rating', sortTitle: 'Непопулярные', sortProperty: 'desc' },
+  { sortName: 'rating', sortTitle: 'Популярные', sortProperty: 'asc' },
 ]
 
 const Sort = () => {
   const [activeSort, setActiveSort] = useState(false);
   const sort = useRef(null);
 
-  const [selected, setSelected] = useState(0);
+  const dispatch = useAppDispatch();
+  const {sortName, sortProperty} = useAppSelector(state=> state.sort)
 
-  //использовать useContext чтобы не убирался фильтр и сортировка чтоб они были в одной области так сказать
+  // const [selected, setSelected] = useState(0);
 
   useEffect(() => {
     const closeSort = (e: MouseEvent)=> {
@@ -46,9 +50,10 @@ const Sort = () => {
       <div className={style.sort}>
         <ul className={activeSort ? style.sort__list_active : style.sort__list}>
           {sortArr.map((item, index) => <li onClick={()=>{
-            setSelected(index)
+            // setSelected(index)
+            dispatch(setSort({sortName: item.sortName, sortProperty: item.sortProperty}))
             setActiveSort(false)
-          }} key={index} className={selected===index?style.sort__list_item_active:style.sort__list_item}>{item.sortName}{selected===index&&<FiCheck />}</li>)}
+          }} key={index} className={sortName===item.sortName&&sortProperty===item.sortProperty?style.sort__list_item_active:style.sort__list_item}>{item.sortTitle}{sortName===item.sortName&&sortProperty===item.sortProperty&&<FiCheck />}</li>)}
         </ul>
       </div>
     </div>

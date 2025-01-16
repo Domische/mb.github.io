@@ -1,15 +1,21 @@
 import { useState } from 'react';
 import style from './FilterItem.module.css'
 import { FiCheck } from "react-icons/fi";
+import { setFilter } from '../../../../../store/filterSlice';
+import { useAppDispatch, useAppSelector } from '../../../../../hook';
 
-interface IFilterItemProps {
+export interface IFilterItemProps {
     value: string;
+    title: string;
 }
 
-const FilterItem: React.FC<IFilterItemProps> = ({value}) => {
-  const [check, setCheck] = useState(false);
+const FilterItem: React.FC<IFilterItemProps> = ({title, value}) => {
+  // const [check, setCheck] = useState(false);
+  const {colors, carbodies} = useAppSelector(state=>state.filter);
+  const dispatch = useAppDispatch();
+  const check = colors.some(item=>item===value)||carbodies.some(item=>item===value);
   return (
-    <li onClick={()=>setCheck(!check)} className={check?style.filter__block_list_item_check:style.filter__block_list_item}>{value}{check&&<FiCheck className={style.check}/>}</li>
+    <li onClick={()=>dispatch(setFilter({title, value}))} className={check?style.filter__block_list_item_check:style.filter__block_list_item}>{value}{check&&<FiCheck className={style.check}/>}</li>
   )
 }
 

@@ -1,7 +1,11 @@
 import { CiFilter } from "react-icons/ci";
 import style from './Filter.module.css'
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import { Dispatch, SetStateAction, useContext, useEffect, useRef, useState } from "react";
 import FilterBlock from "./FilterBlock/FilterBlock";
+import { useAppDispatch, useAppSelector } from "../../hook";
+import { clearFilter } from "../../store/filterSlice";
+import { fetchCars } from "../../store/carsSlice";
+import { PageContext } from "../../App";
 
 const colorArr: string[] = [
     'Белый',
@@ -31,7 +35,16 @@ const Filter: React.FC = () => {
     const [activeFilter, setActiveFilter] = useState(false);
     const [activeColor, setActiveColor] = useState(false);
     const [activeCarBody, setActiveCarBody] = useState(false);
+    const { page, setPage} = useContext(PageContext)
     const filter = useRef(null);
+
+    const dispatch = useAppDispatch();
+
+    const { colors, carbodies } = useAppSelector(state => state.filter);
+
+    const { sortName, sortProperty } = useAppSelector(state => state.sort)
+
+    const { searchName } = useAppSelector(state => state.search)
 
 
     useEffect(() => {
@@ -72,8 +85,12 @@ const Filter: React.FC = () => {
 
             <div className={activeFilter ? style.filter_active : style.filter}>
                 {filterTypeArr.map(item => <FilterBlock key={item.title} title={item.title} arr={item.arr} setActive={item.setActive} active={item.active} />)}
-                <button className={style.saveBtn}>Очистить</button>
-                <button className={style.saveBtn}>Сохранить</button>
+                добавить фильтр по цене (от и до)
+                <button onClick={() => dispatch(clearFilter())} className={style.saveBtn}>Очистить</button>
+                <button onClick={() => {
+                    setPage(0);
+                    dispatch(fetchCars({ page: 0, colors, carbodies, sortName, sortProperty, searchName }))
+                }} className={style.saveBtn}>Показать</button>
             </div>
         </div>
     )
