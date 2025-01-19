@@ -59,6 +59,11 @@ const Cars: React.FC = () => {
     const {sortName, sortProperty} = useAppSelector(state=>state.sort)
 
     const {searchName} = useAppSelector(state=>state.search)
+
+    const {price} = useAppSelector(state=>state.price)
+
+    const priceFromRef = useRef(price.from);
+    const priceToRef = useRef(price.to);
     
     // useEffect(() => {
     //     setLoading(true);
@@ -73,9 +78,14 @@ const Cars: React.FC = () => {
         carbodiesRef.current=carbodies;
     }, [colors, carbodies])
 
+    useEffect(()=> {
+        priceFromRef.current=price.from;
+        priceToRef.current=price.to;
+    }, [price.from, price.to])
+
     useEffect(()=>{
-        dispatch(fetchCars({page, colors: colorsRef.current, carbodies: carbodiesRef.current, sortName, sortProperty, searchName}))
-    }, [page, sortName, sortProperty, searchName, dispatch, colorsRef, carbodiesRef])
+        dispatch(fetchCars({page, colors: colorsRef.current, carbodies: carbodiesRef.current, sortName, sortProperty, searchName, priceFrom: priceFromRef.current, priceTo: priceToRef.current}))
+    }, [page, sortName, sortProperty, searchName, dispatch, colorsRef, carbodiesRef, priceFromRef, priceToRef])
 
     if (error) {
         return (

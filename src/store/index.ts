@@ -4,6 +4,7 @@ import filterReducer from './filterSlice';
 import carsReducer from './carsSlice';
 import sortReducer from './/sortSlice'
 import searchReducer from './searchSlice'
+import priceReducer from "./priceSlice";
 
 const store = configureStore({
     reducer: {
@@ -11,7 +12,8 @@ const store = configureStore({
         filter: filterReducer,
         cars: carsReducer,
         sort: sortReducer,
-        search: searchReducer
+        search: searchReducer,
+        price: priceReducer
     }
 })
 

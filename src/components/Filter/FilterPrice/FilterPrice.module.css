@@ -1,0 +1,9 @@
+.filter__price {
+    width: 100%;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}

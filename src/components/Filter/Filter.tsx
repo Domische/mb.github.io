@@ -1,11 +1,12 @@
 import { CiFilter } from "react-icons/ci";
 import style from './Filter.module.css'
-import { Dispatch, SetStateAction, useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import FilterBlock from "./FilterBlock/FilterBlock";
 import { useAppDispatch, useAppSelector } from "../../hook";
 import { clearFilter } from "../../store/filterSlice";
 import { fetchCars } from "../../store/carsSlice";
 import { PageContext } from "../../App";
+import { clearPrice } from "../../store/priceSlice";
 
 const colorArr: string[] = [
     'Белый',
@@ -24,18 +25,23 @@ const carBodyArr: string[] = [
     'Минивен',
 ]
 
+const priceArr: string[] = [
+    'От',
+    'До',
+]
+
 export interface IFilterTypeArr {
     title: string;
     arr: string[];
-    setActive: Dispatch<SetStateAction<boolean>>;
+    // setActive: Dispatch<SetStateAction<boolean>>;
     active: boolean;
 }
 
 const Filter: React.FC = () => {
     const [activeFilter, setActiveFilter] = useState(false);
-    const [activeColor, setActiveColor] = useState(false);
-    const [activeCarBody, setActiveCarBody] = useState(false);
-    const { page, setPage} = useContext(PageContext)
+    // const [activeColor, setActiveColor] = useState(false);
+    // const [activeCarBody, setActiveCarBody] = useState(false);
+    const { setPage } = useContext(PageContext)
     const filter = useRef(null);
 
     const dispatch = useAppDispatch();
@@ -46,13 +52,15 @@ const Filter: React.FC = () => {
 
     const { searchName } = useAppSelector(state => state.search)
 
+    const { price } = useAppSelector(state => state.price)
+
 
     useEffect(() => {
         const closeFilter = (e: MouseEvent) => {
             if (filter.current && !e.composedPath().includes(filter.current)) {
                 setActiveFilter(false)
-                setActiveColor(false)
-                setActiveCarBody(false)
+                // setActiveColor(false)
+                // setActiveCarBody(false)
             }
         }
         document.addEventListener('click', closeFilter)
@@ -65,31 +73,34 @@ const Filter: React.FC = () => {
         {
             title: 'Цвет',
             arr: colorArr,
-            setActive: setActiveColor,
-            active: activeColor
+            active: activeFilter
         },
         {
             title: 'Кузов',
             arr: carBodyArr,
-            setActive: setActiveCarBody,
-            active: activeCarBody
+            active: activeFilter
+        },
+        {
+            title: 'Цена',
+            arr: priceArr,
+            active: activeFilter
         }
     ]
     return (
         <div ref={filter} className={style.container}>
             <CiFilter onClick={() => {
                 setActiveFilter(!activeFilter)
-                setActiveColor(false)
-                setActiveCarBody(false)
             }} className={style.filterBtn} />
 
             <div className={activeFilter ? style.filter_active : style.filter}>
-                {filterTypeArr.map(item => <FilterBlock key={item.title} title={item.title} arr={item.arr} setActive={item.setActive} active={item.active} />)}
-                добавить фильтр по цене (от и до)
-                <button onClick={() => dispatch(clearFilter())} className={style.saveBtn}>Очистить</button>
+                {filterTypeArr.map(item => <FilterBlock key={item.title} title={item.title} arr={item.arr} active={item.active} />)}
+                <button onClick={() => {
+                    dispatch(clearFilter())
+                    dispatch(clearPrice())
+                }} className={style.saveBtn}>Очистить</button>
                 <button onClick={() => {
                     setPage(0);
-                    dispatch(fetchCars({ page: 0, colors, carbodies, sortName, sortProperty, searchName }))
+                    dispatch(fetchCars({ page: 0, colors, carbodies, sortName, sortProperty, searchName, priceFrom: price.from, priceTo: price.to }))
                 }} className={style.saveBtn}>Показать</button>
             </div>
         </div>
