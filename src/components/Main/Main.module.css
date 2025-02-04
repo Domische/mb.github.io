@@ -1,6 +1,10 @@
+:root {
+    --index: calc(1vw + 1vh);
+}
+
 h2 {
     font-weight: 400;
-    font-size: 40px;
+    font-size: calc(var(--index)*2);
     text-align: center;
     margin-top: 40px;
     user-select: none;

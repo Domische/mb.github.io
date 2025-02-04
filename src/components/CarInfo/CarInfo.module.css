@@ -1,9 +1,16 @@
+:root {
+    --index: calc(1vw + 1vh);
+}
+
 .car {
     margin-bottom: 60px;
+    margin-inline: 10px;
 }
 
 .car__title {
     margin-bottom: 20px;
+    font-size: calc(var(--index)*2);
+    font-weight: 500;
 }
 
 .car__info {
@@ -12,7 +19,7 @@
 }
 
 .car__img {
-    width: 800px;
+    width: 70%;
     height: 500px;
     object-fit: cover;
     object-position: center;
@@ -23,11 +30,12 @@
 .car__text {
     margin: 0 auto;
     align-self: center;
+    width: 30%;
 }
 
 .car__characteristics {
     font-weight: 500;
-    font-size: 25px;
+    font-size: calc(var(--index)*1.1);
     margin-bottom: 20px;
     text-align: center;
 }
@@ -37,5 +45,34 @@
     padding: 10px;
     border-radius: 15px;
     border: 2px solid black;
-    margin-bottom: 20px;
+    width: 200px;
+    margin: 20px auto;
+}
+
+
+@media (max-width: 900px){
+    .car__info {
+        flex-direction: column;
+    }
+    .car__img {
+        width: 100%;
+        height: auto;
+    }
+    .car__text{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .car__item {
+        width: 100%;
+    }
+    .car__characteristics {
+        font-size: calc(var(--index)*1.5);
+    }
+}
+
+@media (max-width: 400px){
+    .car__title {
+        font-size: calc(var(--index)*1.6); 
+    }
+    
 }

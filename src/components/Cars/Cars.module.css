@@ -8,3 +8,17 @@
     margin-inline: 10px;
 }
 
+@media (max-width: 1030px){
+    .cars__list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 250px);
+    }
+}
+
+@media (max-width: 690px){
+    .cars__list {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 300px);
+        justify-content: center;
+    }
+}

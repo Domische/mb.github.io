@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import style from './CarInfo.module.css'
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Error from '../Error/Error';
 import Loading from '../Loading/Loading';
 import Header from '../Header/Header';
@@ -11,7 +11,7 @@ const CarInfo: React.FC = () => {
     const [car, setCar] = useState<ICars>();
     const { id } = useParams();
 
-    const getCarById = async () => {
+    const getCarById = useCallback(async () => {
         try {
             const response = await fetch(`http://localhost:3002/cars/${id}`);
             if (!response.ok) {
@@ -24,11 +24,12 @@ const CarInfo: React.FC = () => {
         } catch (error) {
             return <Error errorMessage='Car Not Found' />
         }
-    }
+    }, [id])
+
 
     useEffect(() => {
-        getCarById();
-    }, [])
+        getCarById()
+    }, [getCarById])
 
     if (car) {
         return (
@@ -41,7 +42,7 @@ const CarInfo: React.FC = () => {
                     <article className={style.car__info}>
                         <img className={style.car__img} src={car.imageURL} alt="" />
                         <div className={style.car__text}>
-                            <h3 className={style.car__characteristics}>Характерики:</h3>
+                            <h3 className={style.car__characteristics}>Характеристики:</h3>
                             <ul className={style.car__list}>
                                 <li className={style.car__item}>Кузов: {car.carbody}</li>
                                 <li className={style.car__item}>Цвет: {car.color}</li>

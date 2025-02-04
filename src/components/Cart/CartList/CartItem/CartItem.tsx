@@ -11,7 +11,7 @@ const CartItem: React.FC<ICars> = ({ ...car }) => {
   const dispatch = useAppDispatch()
 
   const changeCart = (math: string) => {
-    dispatch(patchCartItems({id: car.id, math}))
+    dispatch(patchCartItems({ id: car.id, math }))
   }
 
   return (
@@ -37,20 +37,22 @@ const CartItem: React.FC<ICars> = ({ ...car }) => {
             </li>
           </ul>
         </div>
-        <div className={style.cart__quantity}>
-          <PiMinus onClick={()=> changeCart('-')} className={style.cart__minus} />
-          <span className={style.cart__count}>
-            {car.count}
+        <div className={style.cart__block}>
+          <div className={style.cart__quantity}>
+            <PiMinus onClick={() => changeCart('-')} className={style.cart__minus} />
+            <span className={style.cart__count}>
+              {car.count}
+            </span>
+            <PiPlus onClick={() => changeCart('+')} className={style.cart__plus} />
+          </div>
+          <span className={style.cart__sum}>
+            {(car.price * car.count).toLocaleString('ru')} руб.
           </span>
-          <PiPlus onClick={()=> changeCart('+')} className={style.cart__plus} />
         </div>
-        <span className={style.cart__sum}>
-          {(car.price*car.count).toLocaleString('ru')} руб.
-        </span>
-        <RxCross1 onClick={()=> {
+      </article>
+        <RxCross1 onClick={() => {
           dispatch(deleteCartItems(car.id))
         }} className={style.cart__delete} />
-      </article>
     </li>
   )
 }

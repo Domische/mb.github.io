@@ -23,7 +23,7 @@ const cartSlice = createSlice({
         },
         setCountPlus: (state, action)=> {
             const find = state.cartList.find(item=>item.id===action.payload);
-            if(find){
+            if(find&&find.count<10){
                 find.count+=1;
             }
         },

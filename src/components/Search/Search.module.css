@@ -23,3 +23,9 @@
     width: 80px;
     height: 100%;
 }
+
+@media (max-width: 690px){
+    .search__input {
+        font-size: 25px;
+    }
+}

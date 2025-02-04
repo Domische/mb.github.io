@@ -34,7 +34,7 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 140px;
+    top: 100px;
     right: 0;
     cursor: pointer;
     color: rgba(0, 0, 0, 0.3);
@@ -83,4 +83,11 @@
 
 .cart__ruble {
     margin-top: 3px;
+}
+
+@media (max-width: 400px){
+    .cart__result {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
 }
