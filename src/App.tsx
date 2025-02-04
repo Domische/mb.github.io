@@ -1,11 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home/Home';
-import Cart from './components/Cart/Cart';
-import Error from './components/Error/Error';
-import CarInfo from './components/CarInfo/CarInfo';
+import React from 'react';
 
 
+const CarInfo = React.lazy(()=>import('./components/CarInfo/CarInfo'))
+const Cart = React.lazy(()=>import('./components/Cart/Cart'))
+const Error = React.lazy(()=>import('./components/Error/Error'))
 
 
 function App() {
