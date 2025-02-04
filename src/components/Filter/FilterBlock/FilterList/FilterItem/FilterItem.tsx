@@ -1,8 +1,8 @@
 import style from './FilterItem.module.css'
 import { FiCheck } from "react-icons/fi";
-import { setFilter } from '../../../../../store/filterSlice';
+import { setFilter } from '../../../../../store/filter/filterSlice';
 import { useAppDispatch, useAppSelector } from '../../../../../hook';
-import FilterPrice from '../../../FilterPrice/FilterPrice';
+import FilterPrice from './FilterPrice/FilterPrice';
 
 export interface IFilterItemProps {
   value: string;
@@ -10,7 +10,6 @@ export interface IFilterItemProps {
 }
 
 const FilterItem: React.FC<IFilterItemProps> = ({ title, value }) => {
-  // const [check, setCheck] = useState(false);
   const { colors, carbodies } = useAppSelector(state => state.filter);
   const dispatch = useAppDispatch();
   const check = colors.some(item => item === value) || carbodies.some(item => item === value);

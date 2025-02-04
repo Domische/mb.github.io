@@ -1,0 +1,41 @@
+.car {
+    margin-bottom: 60px;
+}
+
+.car__title {
+    margin-bottom: 20px;
+}
+
+.car__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.car__img {
+    width: 800px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    align-self: center;
+    border-radius: 15px;
+}
+
+.car__text {
+    margin: 0 auto;
+    align-self: center;
+}
+
+.car__characteristics {
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.car__item {
+    list-style: none;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}

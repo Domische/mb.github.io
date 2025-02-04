@@ -1,48 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
 import style from './Slider.module.css';
-import Error from '../Error/Error';
 import { BsChevronCompactRight, BsChevronCompactLeft} from "react-icons/bs";
-import { fetchPhoto } from '../../store/photoSlice';
+import { fetchPhoto } from '../../store/photo/asyncActions';
 import { useAppDispatch, useAppSelector } from '../../hook';
+import Error from '../Error/Error';
 import Loading from '../Loading/Loading';
 
-// interface IPhoto {
-//     id: number;
-//     url: string;
-// }
-
 const Slider: React.FC = () => {
-    // const [photo, setPhoto] = useState<IPhoto[]>([])
-    // const [error, setError] = useState(false)
-    const {photoList, error, loading} = useAppSelector(state=>state.photo)
-    const [width, setWidth] = useState(1200)
-    const sliderLine = useRef<HTMLUListElement>(null);
-    const slider = useRef<HTMLDivElement>(null);
-    let [count, setCount] = useState(0);
     const dispatch = useAppDispatch();
 
-    // const getPhoto = async (url: string): Promise<void> => {
-    //     try {
-    //         const response = await fetch(url);
-    //         if (response.ok) {
-    //             const data = await response.json();
-    //             setPhoto(data);
-    //         } else {
-    //             setError(true)
-    //         }
-    //     } catch (error) {
-    //         console.log(error);
-    //         setError(true);
-    //     }
-    // }
+    const {photoList, error, loading} = useAppSelector(state=>state.photo)
 
-    // useEffect(() => {
-    //     getPhoto('http://localhost:3001/photo')
-    // }, [])
+    const [width, setWidth] = useState(1200)
+    let [count, setCount] = useState(0);
 
-    useEffect(() => {
-        dispatch(fetchPhoto())
-    }, [])
+    const sliderLine = useRef<HTMLUListElement>(null);
+    const slider = useRef<HTMLDivElement>(null);
 
     const onClickNext = ()=> {
         count>=photoList.length-1 ? setCount(photoList.length-1) : setCount(count+=1);
@@ -52,13 +25,9 @@ const Slider: React.FC = () => {
         count<=0 ? setCount(0) : setCount(count-=1);
     }
 
-    // useEffect(()=> {
-    //     if(count>photo.length-1){
-    //         setCount(photo.length-1)
-    //     } else if (count<0) {
-    //         setCount(0)
-    //     }
-    // }, [count])
+    useEffect(() => {
+        dispatch(fetchPhoto())
+    }, [dispatch])
 
     useEffect(()=> {
         const init = (): void => {
@@ -74,7 +43,7 @@ const Slider: React.FC = () => {
 
     if (error) {
         return (
-            <Error errorName={error}/>
+            <Error errorMessage={error}/>
         )
     }
 

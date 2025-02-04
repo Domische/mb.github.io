@@ -1,9 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-interface ISortState {
-    sortName: string;
-    sortProperty: string;
-}
+import { ISortState } from "./types";
 
 const initialState: ISortState = {
     sortName: 'price',

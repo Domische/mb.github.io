@@ -1,8 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-interface ISearchState {
-    searchName: string;
-}
+import { ISearchState } from "./types";
 
 const initialState: ISearchState = {
     searchName: ''

@@ -1,7 +1,7 @@
 import style from './Loading.module.css'
 import loading from '../../images/loading_icon.webp'
 
-const Loading = () => {
+const Loading: React.FC = () => {
     return (
         <div className={style.container}>
             <img className={style.loading} src={loading} alt="" />

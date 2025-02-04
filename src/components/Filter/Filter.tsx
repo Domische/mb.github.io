@@ -3,10 +3,10 @@ import style from './Filter.module.css'
 import { useContext, useEffect, useRef, useState } from "react";
 import FilterBlock from "./FilterBlock/FilterBlock";
 import { useAppDispatch, useAppSelector } from "../../hook";
-import { clearFilter } from "../../store/filterSlice";
-import { fetchCars } from "../../store/carsSlice";
-import { PageContext } from "../../App";
-import { clearPrice } from "../../store/priceSlice";
+import { clearFilter } from "../../store/filter/filterSlice";
+import { PageContext } from "../Home/Home";
+import { clearPrice } from "../../store/price/priceSlice";
+import { fetchCars } from "../../store/cars/asyncActions";
 
 const colorArr: string[] = [
     'Белый',
@@ -33,25 +33,20 @@ const priceArr: string[] = [
 export interface IFilterTypeArr {
     title: string;
     arr: string[];
-    // setActive: Dispatch<SetStateAction<boolean>>;
     active: boolean;
 }
 
 const Filter: React.FC = () => {
-    const [activeFilter, setActiveFilter] = useState(false);
-    // const [activeColor, setActiveColor] = useState(false);
-    // const [activeCarBody, setActiveCarBody] = useState(false);
     const { setPage } = useContext(PageContext)
+
+    const [activeFilter, setActiveFilter] = useState(false);
     const filter = useRef(null);
 
     const dispatch = useAppDispatch();
 
     const { colors, carbodies } = useAppSelector(state => state.filter);
-
     const { sortName, sortProperty } = useAppSelector(state => state.sort)
-
     const { searchName } = useAppSelector(state => state.search)
-
     const { price } = useAppSelector(state => state.price)
 
 
@@ -59,8 +54,6 @@ const Filter: React.FC = () => {
         const closeFilter = (e: MouseEvent) => {
             if (filter.current && !e.composedPath().includes(filter.current)) {
                 setActiveFilter(false)
-                // setActiveColor(false)
-                // setActiveCarBody(false)
             }
         }
         document.addEventListener('click', closeFilter)
@@ -86,6 +79,7 @@ const Filter: React.FC = () => {
             active: activeFilter
         }
     ]
+
     return (
         <div ref={filter} className={style.container}>
             <CiFilter onClick={() => {

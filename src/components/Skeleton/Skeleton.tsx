@@ -1,6 +1,6 @@
 import style from './Skeleton.module.css'
 
-const Skeleton = () => {
+const Skeleton: React.FC = () => {
   return (
     <div className={style.skeleton}>
         

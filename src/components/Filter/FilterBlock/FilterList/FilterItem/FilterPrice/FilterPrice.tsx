@@ -1,5 +1,5 @@
-import { useAppDispatch, useAppSelector } from '../../../hook';
-import { setPriceFrom, setPriceTo } from '../../../store/priceSlice';
+import { useAppDispatch, useAppSelector } from '../../../../../../hook';
+import { setPriceFrom, setPriceTo } from '../../../../../../store/price/priceSlice';
 import style from './FilterPrice.module.css'
 
 interface IFilterPriceProps {

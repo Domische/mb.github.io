@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import photoReducer from './photoSlice';
-import filterReducer from './filterSlice';
-import carsReducer from './carsSlice';
-import sortReducer from './/sortSlice'
-import searchReducer from './searchSlice'
-import priceReducer from "./priceSlice";
+import photoReducer from './photo/photoSlice';
+import filterReducer from './filter/filterSlice';
+import carsReducer from './cars/carsSlice';
+import sortReducer from './sort/sortSlice'
+import searchReducer from './search/searchSlice'
+import priceReducer from "./price/priceSlice";
+import cartReducer from './cart/cartSlice'
 
 const store = configureStore({
     reducer: {
@@ -13,7 +14,8 @@ const store = configureStore({
         cars: carsReducer,
         sort: sortReducer,
         search: searchReducer,
-        price: priceReducer
+        price: priceReducer,
+        cart: cartReducer,
     }
 })
 

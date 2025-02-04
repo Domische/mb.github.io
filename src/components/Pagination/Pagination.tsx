@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { useAppSelector } from '../../hook';
 import style from './Pagination.module.css';
 import { CiCircleChevRight, CiCircleChevLeft } from "react-icons/ci";
-import { PageContext } from '../../App';
+import { PageContext } from '../Home/Home';
 
 const paginArr = [1,2,3]
 
@@ -22,13 +22,13 @@ const Pagination: React.FC = () => {
         }
     }
     return (
-        <div className={style.pagination}>
+        <aside className={style.pagination}>
             <CiCircleChevLeft onClick={()=> onClickPrev()} className={style.pagination__btn} />
             <ul className={style.pagination__list}>
                 {paginArr.map((item, index)=><li key={index} onClick={()=>setPage(index)} className={page===index ? style.pagination__list_item_active : style.pagination__list_item}>{item}</li>)}
             </ul>
             <CiCircleChevRight onClick={()=> onClickNext()} className={style.pagination__btn} />
-        </div>
+        </aside>
     )
 }
 

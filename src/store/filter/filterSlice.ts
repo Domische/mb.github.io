@@ -1,13 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IFilterItemProps } from "../components/Filter/FilterBlock/FilterList/FilterItem/FilterItem";
+import { IFilterItemProps } from "../../components/Filter/FilterBlock/FilterList/FilterItem/FilterItem";
+import { IFilterState } from "./types";
 
-type FilterState = {
-    [key: string]: string[];
-    colors: string[];
-    carbodies: string[];
-}
-
-const initialState: FilterState = {
+const initialState: IFilterState = {
     colors: [],
     carbodies: [],
 }

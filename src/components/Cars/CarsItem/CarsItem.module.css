@@ -32,12 +32,17 @@
     opacity: 1;
 }
 
-.cars__item:hover img{
+.cars__item:hover .cars__item_img{
     transform: scale(1.05);
     opacity: 0.5;
 }
 
-.cars__item img {
+.cars__item_article {
+    width: 100%;
+    height: 100%;
+}
+
+.cars__item_img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -63,7 +68,8 @@
     transition: opacity 0.6s ease-in-out;
 }
 
-.cars__item_info button {
+.cars__item_add, .cars__item_link, .cars__item_quantity, .cars__item_max {
+    text-align: center;
     cursor: pointer;
     font-weight: 500;
     font-size: 14px;
@@ -74,9 +80,23 @@
     border-radius: 15px;
     transition: background-color 0.3s ease-in-out;
     user-select: none;
+    text-decoration: none;
+    width: 150px;
 }
 
-.cars__item_info button:hover {
+.cars__item_add:hover {
     background-color: black;
     color: white;
 }
+
+.cars__item_link:hover {
+    background-color: black;
+    color: white;
+}
+
+.cars__item_quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

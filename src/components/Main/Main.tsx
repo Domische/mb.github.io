@@ -9,13 +9,17 @@ const Main: React.FC = () => {
   return (
     <main className={style.main}>
       <Slider />
-      <h1>Автомобили в наличии</h1>
-      <div className={style.settings}>
-        <Filter />
-        <Sort />
-      </div>
-      <Cars />
-      <Pagination />
+      <section className={style.cars}>
+        <header>
+          <h2>Автомобили в наличии</h2>
+        </header>
+        <aside className={style.cars__settings}>
+          <Filter />
+          <Sort />
+        </aside>
+        <Cars />
+        <Pagination />
+      </section>
     </main>
   )
 }
